@@ -105,6 +105,38 @@
       font-size: 0.75rem; color: var(--muted); line-height: 1.8;
     }
 </style>
+<!-- pegno-footer-css -->
+  <style>
+    .pf-footer { background: #f8f9fb; border-top: 1px solid #d8dde6; padding: 3rem 1.5rem; color: #111827; }
+    .pf-inner { max-width: 1100px; margin: 0 auto; }
+    .pf-top { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+    @media (min-width: 768px) { .pf-top { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+    .pf-logo { display: flex; align-items: center; gap: 0.75rem; color: #111827; text-decoration: none; }
+    .pf-logo img { height: 32px; width: 32px; object-fit: contain; display: block; }
+    .pf-logo span { font-size: 1.25rem; font-weight: 900; letter-spacing: -0.03em; }
+    .pf-tagline { margin: 0.75rem 0 0; max-width: 400px; font-size: 0.875rem; line-height: 1.6; color: #6b7280; }
+    .pf-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .pf-links a { font-size: 0.875rem; color: #6b7280; text-decoration: none; }
+    .pf-links a:hover { color: #111827; }
+    .pf-cols { display: flex; flex-wrap: wrap; gap: 2rem 3rem; }
+    .pf-col h4 { margin: 0 0 0.5rem; font-size: 0.8125rem; font-weight: 700; color: #111827; }
+    .pf-col ul { list-style: none; margin: 0; padding: 0; }
+    .pf-col li { margin: 0.25rem 0; }
+    .pf-col a { font-size: 0.875rem; color: #6b7280; text-decoration: none; }
+    .pf-col a:hover { color: #111827; }
+    .pf-regions { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #d8dde6; }
+    @media (min-width: 768px) { .pf-regions { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; } }
+    .pf-region p { margin: 0; font-size: 0.75rem; line-height: 1.7; color: #6b7280; overflow-wrap: anywhere; }
+    .pf-region p.pf-entity { margin-bottom: 0.25rem; font-size: 0.875rem; font-weight: 700; color: #111827; }
+    .pf-region-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.75rem; }
+    .pf-region-links a { font-size: 0.8125rem; color: #1a56db; text-decoration: none; }
+    .pf-region-links a:hover { text-decoration: underline; }
+    .pf-contacts { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #d8dde6; font-size: 0.75rem; line-height: 1.8; color: #6b7280; overflow-wrap: anywhere; }
+    .pf-contacts p { margin: 0; }
+    .pf-contacts a { color: #6b7280; }
+    .pf-contacts a:hover { color: #111827; }
+  </style>
+<!-- /pegno-footer-css -->
 </head>
 <body><header>
   <div class="nav-inner">
@@ -128,13 +160,11 @@
   <p>Everything you need to know about Pegno.</p>
 </div>
 <div class="content">
-<div class="card"><h2>What is Pegno?</h2><p>Pegno is a milestone-based payment escrow platform for service transactions. It holds funds securely until agreed milestones are completed, protecting both the client paying for a service and the provider delivering it.</p></div>
-<div class="card"><h2>How does escrow work?</h2><p>When a deal is created, the client deposits the agreed amount into a safeguarded escrow account. The money is held securely and only released to the provider when each milestone is marked complete and approved. Neither party can access the funds until the conditions are met.</p></div>
-<div class="card"><h2>Is Pegno regulated?</h2><p>Pegno operates through regulated banking and payment partners in each market it serves, and/or pursues appropriate financial services registration in each jurisdiction where it's required. Client funds are held in safeguarded accounts separate from Pegno's own funds.</p></div>
-<div class="card"><h2>Is my money safe?</h2><p>Yes. All client funds are held in designated safeguarding accounts at authorised credit institutions, separate from Pegno's own money. This means your escrow funds are held separately and are not at risk if Pegno ceases to trade.</p></div>
+<div class="card"><h2>What is Pegno?</h2><p>Pegno is a milestone-based payment escrow platform for service transactions. It holds funds securely until agreed milestones are completed, protecting both the Hirer paying for a service and the Contractor delivering it.</p></div>
+<div class="card"><h2>How does escrow work?</h2><p>When a deal is created, the Hirer deposits the agreed amount into a safeguarded escrow account. The money is held securely and only released to the Contractor when each milestone is marked complete and approved. Neither party can access the funds until the conditions are met.</p></div>
 <div class="card"><h2>How much does Pegno cost?</h2><p>The Hirer pays a 1% fee when they fund a job. The Contractor pays a 1% fee on each payment released, worked out on the amount released, with a minimum that covers the payout cost. This is shown before the Contractor accepts the job. That comes to about 2% in total on a job paid in full. A refund is the part of the job amount not yet released to the Contractor. The 1% Hirer fee is not part of it and is not refunded. If the Hirer cancels or asks for a refund, a refund fee of A$2 (in Australia) is taken from the refund; there is no refund fee when the refund follows a dispute decided in the Hirer's favour or is made by Pegno. There is no charge to create an account or create a job. Fees are shown clearly before you fund a job.</p></div>
-<div class="card"><h2>Who can use Pegno?</h2><p>Pegno is designed for any service transaction — tradies, plumbers, electricians, builders, cleaners, removalists, mechanics, landscapers, and any professional service provider. Clients hiring any of these providers can also use Pegno to pay safely.</p></div>
-<div class="card"><h2>How do I create a deal?</h2><p>Download the Pegno app, sign up for free, and tap 'Create a Deal'. Add the job title, total amount, and milestones. Share the deal link or QR code with your client. They fund it and you begin work.</p></div>
+<div class="card"><h2>Who can use Pegno?</h2><p>Pegno is designed for any service transaction — tradies, plumbers, electricians, builders, cleaners, removalists, mechanics, landscapers, and any other professional Contractor. Hirers who engage any of them can also use Pegno to pay safely.</p></div>
+<div class="card"><h2>How do I create a deal?</h2><p>Download the Pegno app, sign up for free, and tap 'Create a Deal'. Add the job title, total amount, and milestones. Share the deal link or QR code with your Hirer. They fund it and you begin work.</p></div>
 <div class="card"><h2>What happens if there's a dispute?</h2><p>Pegno has a three-tier dispute resolution process. First, both parties attempt to resolve directly. If unresolved, Pegno reviews the dispute and makes a determination. For regulated complaints, our IDR (Internal Dispute Resolution) process applies and you can escalate to the relevant financial ombudsman.</p></div>
 <div class="card"><h2>How do I delete my account?</h2><p>Go to Account Settings in the app, scroll to the Danger Zone section, and select Delete Account. You will be asked to type DELETE to confirm. Note that accounts with active deals cannot be deleted until those deals are resolved.</p></div>
 <div class="card"><h2>Which countries does Pegno support?</h2><p>Pegno currently operates in Australia and the United Kingdom, with the United States and Singapore coming soon. The region is set per transaction and Pegno routes to the appropriate payment rails for each jurisdiction.</p></div>
@@ -143,24 +173,52 @@
   <a href="/support.html" style="background:var(--blue);color:#fff;padding:0.75rem 2rem;border-radius:9999px;font-weight:600;font-size:1rem;">Contact Support</a>
 </div>
 </div>
-<footer>
-  <div class="footer-inner">
-    <div class="footer-top">
-      <div class="footer-logo">
-        <img src="pegno-log.png.png" alt="Pegno" />
+<footer class="pf-footer">
+  <div class="pf-inner">
+    <div class="pf-top">
+      <a href="/index.html" class="pf-logo">
+        <img src="pegno-log.png.png" alt="Pegno" width="32" height="32" />
         <span>Pegno</span>
-      </div>
-      <div class="footer-links">
-        <a href="/privacy.html">Privacy Policy</a>
-        <a href="/terms.html">Terms of Service</a>
+      </a>
+      <div class="pf-links">
         <a href="/faq.html">FAQ</a>
         <a href="/support.html">Support</a>
         <a href="https://pegno.app">Sign In</a>
       </div>
     </div>
-    <div class="footer-bottom">
-      <p>Pegno UK Ltd (Company No. 17169218) · Registered in England and Wales</p>
-      <p>Registered Office: 167-169 Great Portland Street, London W1W 5PF</p>      <p style="margin-top:0.75rem;">© 2026 Pegno UK Ltd. All rights reserved.</p>
+    <div class="pf-regions">
+      <div class="pf-region">
+        <p class="pf-entity">Pegno AU Pty Ltd</p>
+        <p>ACN 703 796 945</p>
+        <p>Australia</p>
+        <div class="pf-region-links">
+          <a href="/terms-au.html">Terms of Service</a>
+          <a href="/privacy-au.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="pf-region">
+        <p class="pf-entity">Pegno UK Ltd</p>
+        <p>Company No. 17169218</p>
+        <p>Registered in England and Wales</p>
+        <p>Registered Office: 167-169 Great Portland Street, London W1W 5PF</p>
+        <div class="pf-region-links">
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="pf-region">
+        <p class="pf-entity">Pegno Inc</p>
+        <p>A Delaware corporation</p>
+        <p>Registered agent: 16192 Coastal Hwy, Lewes, DE 19958</p>
+        <div class="pf-region-links">
+          <a href="/terms-us.html">Terms of Service</a>
+          <a href="/privacy-us.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="pf-contacts">
+      <p>Support: <a href="mailto:hello@pegno.app">hello@pegno.app</a> &middot; Privacy: <a href="mailto:privacy@pegno.app">privacy@pegno.app</a> &middot; Complaints: <a href="mailto:complaints@pegno.app">complaints@pegno.app</a></p>
+      <p>&copy; 2026 Pegno. All rights reserved.</p>
     </div>
   </div>
 </footer>

@@ -177,6 +177,38 @@
       .endpoint-desc { grid-column: 1 / -1; padding-top: 4px; }
     }
   </style>
+<!-- pegno-footer-css -->
+  <style>
+    .pf-footer { background: #f8f9fb; border-top: 1px solid #d8dde6; padding: 3rem 1.5rem; color: #111827; }
+    .pf-inner { max-width: 1100px; margin: 0 auto; }
+    .pf-top { display: flex; flex-direction: column; gap: 1.5rem; align-items: flex-start; }
+    @media (min-width: 768px) { .pf-top { flex-direction: row; justify-content: space-between; align-items: flex-start; } }
+    .pf-logo { display: flex; align-items: center; gap: 0.75rem; color: #111827; text-decoration: none; }
+    .pf-logo img { height: 32px; width: 32px; object-fit: contain; display: block; }
+    .pf-logo span { font-size: 1.25rem; font-weight: 900; letter-spacing: -0.03em; }
+    .pf-tagline { margin: 0.75rem 0 0; max-width: 400px; font-size: 0.875rem; line-height: 1.6; color: #6b7280; }
+    .pf-links { display: flex; flex-wrap: wrap; gap: 1rem; }
+    .pf-links a { font-size: 0.875rem; color: #6b7280; text-decoration: none; }
+    .pf-links a:hover { color: #111827; }
+    .pf-cols { display: flex; flex-wrap: wrap; gap: 2rem 3rem; }
+    .pf-col h4 { margin: 0 0 0.5rem; font-size: 0.8125rem; font-weight: 700; color: #111827; }
+    .pf-col ul { list-style: none; margin: 0; padding: 0; }
+    .pf-col li { margin: 0.25rem 0; }
+    .pf-col a { font-size: 0.875rem; color: #6b7280; text-decoration: none; }
+    .pf-col a:hover { color: #111827; }
+    .pf-regions { display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #d8dde6; }
+    @media (min-width: 768px) { .pf-regions { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 2rem; } }
+    .pf-region p { margin: 0; font-size: 0.75rem; line-height: 1.7; color: #6b7280; overflow-wrap: anywhere; }
+    .pf-region p.pf-entity { margin-bottom: 0.25rem; font-size: 0.875rem; font-weight: 700; color: #111827; }
+    .pf-region-links { display: flex; flex-wrap: wrap; gap: 0.25rem 1rem; margin-top: 0.75rem; }
+    .pf-region-links a { font-size: 0.8125rem; color: #1a56db; text-decoration: none; }
+    .pf-region-links a:hover { text-decoration: underline; }
+    .pf-contacts { margin-top: 2rem; padding-top: 1.5rem; border-top: 1px solid #d8dde6; font-size: 0.75rem; line-height: 1.8; color: #6b7280; overflow-wrap: anywhere; }
+    .pf-contacts p { margin: 0; }
+    .pf-contacts a { color: #6b7280; }
+    .pf-contacts a:hover { color: #111827; }
+  </style>
+<!-- /pegno-footer-css -->
 </head>
 <body>
 
@@ -199,7 +231,7 @@
   <div class="hero-inner">
     <div class="hero-badge">Powered by Pegno · Partner API v1</div>
     <h1>Embed <span class="highlight">protected payments</span> into your platform in a weekend.</h1>
-    <p>Powered by Pegno gives marketplaces, booking platforms, and transaction sites a fully-regulated milestone-based escrow layer through one embedded API. Buyers trust it. Providers use it. You don't need a money-transmission licence.</p>
+    <p>Powered by Pegno gives marketplaces, booking platforms, and transaction sites a milestone-based escrow layer through one embedded API. Buyers trust it. Providers use it.</p>
     <div class="hero-cta">
       <a href="#quickstart" class="btn-primary">Start Building</a>
       <a href="https://pegno.app/partners/apply" class="btn-secondary">Request API Access</a>
@@ -214,8 +246,8 @@
   <div class="grid-3">
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/></svg></div>
-      <h3>Regulated escrow, out of the box</h3>
-      <p>Funds sit in real safeguarding accounts held by regulated banking and payment partners in every market we operate. You don't need your own licence.</p>
+      <h3>Escrow, out of the box</h3>
+      <p>Pegno runs the escrow and payment flow, so you do not build it.</p>
     </div>
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 5h16v2H4V9zm0 5h10v2H4v-2zm0 5h10v2H4v-2zm12 0v-5h6v5h-6z"/></svg></div>
@@ -230,7 +262,7 @@
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
       <h3>One API, four regions</h3>
-      <p>Same endpoints for AU, GB, US, and SG. Set the <code>region</code> field per transaction; Pegno routes to the right safeguarding rail.</p>
+      <p>Same endpoints for AU, GB and US. Set the <code>region</code> field per transaction; Pegno routes to the right safeguarding rail.</p>
     </div>
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2l-8 12h6l-2 8 8-12h-6l2-8z"/></svg></div>
@@ -372,45 +404,69 @@
   </div>
 </section>
 
-<footer class="footer">
-  <div class="footer-inner">
-    <div class="footer-cols">
+<footer class="pf-footer">
+  <div class="pf-inner">
+    <div class="pf-top">
       <div>
-        <div class="logo" style="margin-bottom:20px;">
-          <img src="pegno-log.png.png" alt="Pegno logo" width="40" height="40" />
-          <span class="logo-text">Pegno</span>
+        <a href="/index.html" class="pf-logo">
+          <img src="pegno-log.png.png" alt="Pegno" width="32" height="32" />
+          <span>Pegno</span>
+        </a>
+        <p class="pf-tagline">Milestone-based payment escrow for the service economy. Trust infrastructure that platforms can embed in a weekend.</p>
+      </div>
+      <div class="pf-cols">
+        <div class="pf-col">
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#quickstart">Quickstart</a></li>
+            <li><a href="#endpoints">API Reference</a></li>
+            <li><a href="#webhooks">Webhooks</a></li>
+            <li><a href="https://pegno.app/partners/apply">Request Access</a></li>
+          </ul>
         </div>
-        <p style="color:var(--gray);font-size:14px;line-height:1.6;max-width:400px;">
-          Regulated milestone-based payment escrow for the service economy. Trust infrastructure that platforms can embed in a weekend.
-        </p>
-      </div>
-      <div>
-        <h4>Product</h4>
-        <ul>
-          <li><a href="#quickstart">Quickstart</a></li>
-          <li><a href="#endpoints">API Reference</a></li>
-          <li><a href="#webhooks">Webhooks</a></li>
-          <li><a href="https://pegno.app/partners/apply">Request Access</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Company</h4>
-        <ul>
-          <li><a href="/index.html">pegno.co</a></li>
-          <li><a href="mailto:developers@pegno.app">Contact</a></li>
-          <li><a href="/privacy.html">Privacy</a></li>
-          <li><a href="/terms.html">Terms</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4>Regulation</h4>
-        <ul>
-          <li>Companies House 17169218</li>        </ul>
+        <div class="pf-col">
+          <h4>Company</h4>
+          <ul>
+            <li><a href="/index.html">pegno.co</a></li>
+            <li><a href="mailto:developers@pegno.app">Contact</a></li>
+            <li><a href="https://pegno.app">Sign In</a></li>
+          </ul>
+        </div>
       </div>
     </div>
-    <div class="footer-bottom">
-      <div>© 2026 Pegno UK Ltd. All rights reserved.</div>
-      <div>Regulated safeguarding under PSRs 2017</div>
+    <div class="pf-regions">
+      <div class="pf-region">
+        <p class="pf-entity">Pegno AU Pty Ltd</p>
+        <p>ACN 703 796 945</p>
+        <p>Australia</p>
+        <div class="pf-region-links">
+          <a href="/terms-au.html">Terms of Service</a>
+          <a href="/privacy-au.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="pf-region">
+        <p class="pf-entity">Pegno UK Ltd</p>
+        <p>Company No. 17169218</p>
+        <p>Registered in England and Wales</p>
+        <p>Registered Office: 167-169 Great Portland Street, London W1W 5PF</p>
+        <div class="pf-region-links">
+          <a href="/terms.html">Terms of Service</a>
+          <a href="/privacy.html">Privacy Policy</a>
+        </div>
+      </div>
+      <div class="pf-region">
+        <p class="pf-entity">Pegno Inc</p>
+        <p>A Delaware corporation</p>
+        <p>Registered agent: 16192 Coastal Hwy, Lewes, DE 19958</p>
+        <div class="pf-region-links">
+          <a href="/terms-us.html">Terms of Service</a>
+          <a href="/privacy-us.html">Privacy Policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="pf-contacts">
+      <p>Support: <a href="mailto:hello@pegno.app">hello@pegno.app</a> &middot; Privacy: <a href="mailto:privacy@pegno.app">privacy@pegno.app</a> &middot; Complaints: <a href="mailto:complaints@pegno.app">complaints@pegno.app</a></p>
+      <p>&copy; 2026 Pegno. All rights reserved.</p>
     </div>
   </div>
 </footer>
