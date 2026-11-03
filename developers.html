@@ -5,7 +5,7 @@
   <link rel="icon" type="image/png" href="/pegno-log.png.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Powered by Pegno — Developer Documentation</title>
-  <meta name="description" content="Embed regulated milestone-based payment escrow into your platform. Full API reference and integration guides." />
+  <meta name="description" content="Embed milestone-based payment escrow into your platform. Full API reference and integration guides." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -262,7 +262,7 @@
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 3v18M3 12h18" stroke="currentColor" stroke-width="2" fill="none"/></svg></div>
       <h3>One API, four regions</h3>
-      <p>Same endpoints for AU, GB and US. Set the <code>region</code> field per transaction; Pegno routes to the right safeguarding rail.</p>
+      <p>Same endpoints for AU, GB and US. Set the <code>region</code> field per transaction; Pegno routes to the right payment rail for that region.</p>
     </div>
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M13 2l-8 12h6l-2 8 8-12h-6l2-8z"/></svg></div>
@@ -327,7 +327,7 @@
       <div class="step-num">3</div>
       <div>
         <h3>Redirect the buyer to checkout</h3>
-        <p>The response includes a <code>checkout_url</code>. Redirect your buyer there. Pegno handles funding, safeguarding, milestone tracking, releases, and disputes. You get webhooks at every stage.</p>
+        <p>The response includes a <code>checkout_url</code>. Redirect your buyer there. Pegno handles funding, holding, milestone tracking, releases, and disputes. You get webhooks at every stage.</p>
         <div class="code-block"><span class="key">HTTP</span>/1.1 <span class="num">201</span> Created
 
 {
@@ -396,7 +396,7 @@
   <p class="lead">Every state change fires a webhook. Payloads are HMAC-SHA256 signed. Verify signatures before trusting delivery.</p>
   <div class="grid-3">
     <div class="feature"><h3><code style="font-size:14px">transaction.created</code></h3><p>Transaction record created. Buyer has not yet funded.</p></div>
-    <div class="feature"><h3><code style="font-size:14px">transaction.funded</code></h3><p>Funds received into safeguarding. Provider can begin work.</p></div>
+    <div class="feature"><h3><code style="font-size:14px">transaction.funded</code></h3><p>Funds received and held in escrow. Provider can begin work.</p></div>
     <div class="feature"><h3><code style="font-size:14px">milestone.submitted</code></h3><p>Provider has submitted a milestone for buyer review.</p></div>
     <div class="feature"><h3><code style="font-size:14px">milestone.approved</code></h3><p>Buyer approved and funds released to provider.</p></div>
     <div class="feature"><h3><code style="font-size:14px">dispute.opened</code></h3><p>A party has raised a dispute. Handling flow begins.</p></div>
