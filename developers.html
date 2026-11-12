@@ -5,7 +5,7 @@
   <link rel="icon" type="image/png" href="/pegno-log.png.png" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Powered by Pegno — Developer Documentation</title>
-  <meta name="description" content="Embed milestone-based payment escrow into your platform. Full API reference and integration guides." />
+  <meta name="description" content="Embed milestone-based held payments into your platform. Full API reference and integration guides." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -230,8 +230,8 @@
 <section class="hero">
   <div class="hero-inner">
     <div class="hero-badge">Powered by Pegno · Partner API v1</div>
-    <h1>Embed <span class="highlight">protected payments</span> into your platform in a weekend.</h1>
-    <p>Powered by Pegno gives marketplaces, booking platforms, and transaction sites a milestone-based escrow layer through one embedded API. Buyers trust it. Providers use it.</p>
+    <h1>Embed <span class="highlight">held payments</span> into your platform in a weekend.</h1>
+    <p>Powered by Pegno gives marketplaces, booking platforms, and transaction sites a milestone-based payment hold layer through one embedded API. Buyers trust it. Providers use it.</p>
     <div class="hero-cta">
       <a href="#quickstart" class="btn-primary">Start Building</a>
       <a href="https://pegno.app/partners/apply" class="btn-secondary">Request API Access</a>
@@ -246,8 +246,8 @@
   <div class="grid-3">
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M12 2L4 5v6c0 5 3.5 9.5 8 11 4.5-1.5 8-6 8-11V5l-8-3z"/></svg></div>
-      <h3>Escrow, out of the box</h3>
-      <p>Pegno runs the escrow and payment flow, so you do not build it.</p>
+      <h3>Payment holds, out of the box</h3>
+      <p>Pegno runs the payment hold and payment flow, so you do not build it.</p>
     </div>
     <div class="feature">
       <div class="feature-icon"><svg viewBox="0 0 24 24"><path d="M4 4h16v2H4V4zm0 5h16v2H4V9zm0 5h10v2H4v-2zm0 5h10v2H4v-2zm12 0v-5h6v5h-6z"/></svg></div>
@@ -280,7 +280,7 @@
 <section class="quickstart" id="quickstart">
   <div class="qs-inner">
     <div class="section-eyebrow">Quickstart</div>
-    <h2>Your first protected transaction in three steps.</h2>
+    <h2>Your first held transaction in three steps.</h2>
     <p class="lead" style="font-size:18px;color:var(--gray);margin-bottom:48px;line-height:1.55;">Get sandbox credentials, create a transaction, redirect the buyer. From nothing to a working checkout URL in under 10 minutes.</p>
 
     <div class="step">
@@ -299,7 +299,7 @@
     <div class="step">
       <div class="step-num">2</div>
       <div>
-        <h3>Create a protected transaction</h3>
+        <h3>Create a held transaction</h3>
         <p>Call <code>POST /v1/transactions</code> with the buyer, provider, amount, and region. You get back a hosted checkout URL to redirect your buyer to.</p>
         <div class="code-block"><span class="key">POST</span> /v1/transactions
 <span class="key">Content-Type</span>: application/json
@@ -396,7 +396,7 @@
   <p class="lead">Every state change fires a webhook. Payloads are HMAC-SHA256 signed. Verify signatures before trusting delivery.</p>
   <div class="grid-3">
     <div class="feature"><h3><code style="font-size:14px">transaction.created</code></h3><p>Transaction record created. Buyer has not yet funded.</p></div>
-    <div class="feature"><h3><code style="font-size:14px">transaction.funded</code></h3><p>Funds received and held in escrow. Provider can begin work.</p></div>
+    <div class="feature"><h3><code style="font-size:14px">transaction.funded</code></h3><p>Funds received and held as a held payment. Provider can begin work.</p></div>
     <div class="feature"><h3><code style="font-size:14px">milestone.submitted</code></h3><p>Provider has submitted a milestone for buyer review.</p></div>
     <div class="feature"><h3><code style="font-size:14px">milestone.approved</code></h3><p>Buyer approved and funds released to provider.</p></div>
     <div class="feature"><h3><code style="font-size:14px">dispute.opened</code></h3><p>A party has raised a dispute. Handling flow begins.</p></div>
@@ -412,7 +412,7 @@
           <img src="pegno-log.png.png" alt="Pegno" width="32" height="32" />
           <span>Pegno</span>
         </a>
-        <p class="pf-tagline">Milestone-based payment escrow for the service economy. Trust infrastructure that platforms can embed in a weekend.</p>
+        <p class="pf-tagline">Milestone-based held payments for the service economy. Trust infrastructure that platforms can embed in a weekend.</p>
       </div>
       <div class="pf-cols">
         <div class="pf-col">
